@@ -1,0 +1,17 @@
+
+
+{% extends 'layout.html' %} 
+{% block body %}
+<p>this is home page</p>
+{% if session %}
+<p>welcome you signed in </p>
+{% else %}
+<p>Login</p>
+<form action="/login" method="POST">
+	<input type="text" name="username" placeholder="enter user name"><br>
+	<input type="password" name="password" placeholder="enter password "><br>
+	<input type="submit" value="login">
+</form>
+{% endif %}
+
+{% endblock body %}
